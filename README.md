@@ -1,0 +1,1 @@
+#JUnit test for my Lab6.BoolCalculate
