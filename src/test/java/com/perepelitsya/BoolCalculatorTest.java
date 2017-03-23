@@ -3,63 +3,77 @@ package com.perepelitsya;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.logging.Logger;
+
 /**
  * Created by Andriu on 16.03.2017.
  */
 public class BoolCalculatorTest {
     //BinaryConstantZero
+//to add 144 logger
+    static Logger logger = Logger.getLogger(String.valueOf(BoolCalculator.class));
+
     @Test
     public void BinaryConstantZero_null_null() throws Exception {
         Boolean result = BoolCalculator.f0(null, null);
         Assert.assertEquals(false, result);
+        logger.info("In process test BinaryConstantZero_null_null");
     }
 
     @Test
     public void BinaryConstantZero_null_false() throws Exception {
         Boolean result = BoolCalculator.f0(null, false);
         Assert.assertEquals(false, result);
+        logger.info("In process test BinaryConstantZero_null_false");
     }
 
     @Test
     public void BinaryConstantZero_null_true() throws Exception {
         Boolean result = BoolCalculator.f0(null, true);
         Assert.assertEquals(false, result);
+        logger.info("In process test BinaryConstantZero_null_true");
     }
 
     @Test
     public void BinaryConstantZero_false_null() throws Exception {
         Boolean result = BoolCalculator.f0(false, null);
         Assert.assertEquals(false, result);
+        logger.info("In process test BinaryConstantZero_false_null");
     }
 
     @Test
     public void BinaryConstantZero_false_false() throws Exception {
         Boolean result = BoolCalculator.f0(false, false);
         Assert.assertEquals(false, result);
+        logger.info("In process test BinaryConstantZero_false_false");
     }
 
     @Test
     public void BinaryConstantZero_false_true() throws Exception {
         Boolean result = BoolCalculator.f0(false, true);
         Assert.assertEquals(false, result);
+        logger.info("In process test BinaryConstantZero_false_true");
     }
 
     @Test
     public void BinaryConstantZero_true_null() throws Exception {
         Boolean result = BoolCalculator.f0(true, null);
         Assert.assertEquals(false, result);
+        logger.info("In process test BinaryConstantZero_false_null");
     }
 
     @Test
     public void BinaryConstantZero_true_false() throws Exception {
         Boolean result = BoolCalculator.f0(true, false);
         Assert.assertEquals(false, result);
+        logger.info("In process test BinaryConstantZero_true_false");
     }
 
     @Test
     public void BinaryConstantZero_true_true() throws Exception {
         Boolean result = BoolCalculator.f0(true, true);
         Assert.assertEquals(false, result);
+        logger.info("In process test BinaryConstantZero_true_true");
     }
 
     //AND
@@ -72,6 +86,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test AND_null_null");
     }
 
     @Test
@@ -83,6 +98,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test AND_null_false");
     }
 
     @Test
@@ -94,6 +110,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test AND_null_true");
     }
 
     @Test
@@ -105,6 +122,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test AND_false_null");
     }
 
     @Test
@@ -116,6 +134,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test AND_false_false");
     }
 
     @Test
@@ -127,6 +146,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test AND_false_true");
     }
 
     @Test
@@ -138,6 +158,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test AND_true_null");
     }
 
     @Test
@@ -149,6 +170,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test AND_true_false");
     }
 
     @Test
@@ -160,6 +182,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test AND_true_true");
     }
 
     //Inhibition (X/Y)
@@ -172,6 +195,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Inhibition_X_null_null");
     }
 
     @Test
@@ -183,6 +207,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Inhibition_X_null_false");
     }
 
     @Test
@@ -194,6 +219,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Inhibition_X_null_true");
     }
 
     @Test
@@ -205,6 +231,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Inhibition_X_false_null");
     }
 
     @Test
@@ -216,6 +243,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Inhibition_X_false_false");
     }
 
     @Test
@@ -227,6 +255,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Inhibition_X_false_true");
     }
 
     @Test
@@ -238,6 +267,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Inhibition_X_true_null");
     }
 
     @Test
@@ -249,6 +279,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Inhibition_X_true_false");
     }
 
     @Test
@@ -260,6 +291,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Inhibition_X_true_true");
     }
 
     //Transfer_X
@@ -272,6 +304,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Transfer_X_null_null");
     }
 
     @Test
@@ -283,6 +316,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Transfer_X_null_false");
     }
 
     @Test
@@ -294,6 +328,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Transfer_X_null_true");
     }
 
     @Test
@@ -305,6 +340,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Transfer_X_false_null");
     }
 
     @Test
@@ -316,6 +352,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Transfer_X_false_false");
     }
 
     @Test
@@ -327,6 +364,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Transfer_X_false_true");
     }
 
     @Test
@@ -338,6 +376,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Transfer_X_true_null");
     }
 
     @Test
@@ -349,6 +388,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Transfer_X_true_false");
     }
 
     @Test
@@ -360,6 +400,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Transfer_X_true_true");
     }
 
     // Inhibition (Y/X)*/
@@ -372,6 +413,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Inhibition_Y_null_null");
     }
 
     @Test
@@ -383,6 +425,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Inhibition_Y_null_false");
     }
 
     @Test
@@ -394,6 +437,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Inhibition_Y_null_true");
     }
 
     @Test
@@ -405,6 +449,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Inhibition_Y_false_null");
     }
 
     @Test
@@ -416,6 +461,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Inhibition_Y_false_false");
     }
 
     @Test
@@ -427,6 +473,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Inhibition_Y_false_true");
     }
 
     @Test
@@ -438,6 +485,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Inhibition_Y_true_null");
     }
 
     @Test
@@ -449,6 +497,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Inhibition_Y_true_false");
     }
 
     @Test
@@ -460,6 +509,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Inhibition_Y_true_true");
     }
 
     //Transfer_Y
@@ -472,6 +522,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Transfer_Y_null_null");
     }
 
     @Test
@@ -483,6 +534,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Transfer_Y_null_false");
     }
 
     @Test
@@ -494,6 +546,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Transfer_Y_null_true");
     }
 
     @Test
@@ -505,6 +558,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Transfer_Y_false_null");
     }
 
     @Test
@@ -516,6 +570,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Transfer_Y_false_false");
     }
 
     @Test
@@ -527,6 +582,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Transfer_Y_fasle_true");
     }
 
     @Test
@@ -538,6 +594,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Transfer_Y_true_null");
     }
 
     @Test
@@ -549,6 +606,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Transfer_Y_true_false");
     }
 
     @Test
@@ -560,6 +618,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Transfer_Y_true_true");
     }
 
     /// XOR
@@ -572,6 +631,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test XOR_null_null");
     }
 
     @Test
@@ -583,6 +643,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test XOR_null_false");
     }
 
     @Test
@@ -594,6 +655,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test XOR_null_true");
     }
 
     @Test
@@ -605,6 +667,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test XOR_false_null");
     }
 
     @Test
@@ -616,6 +679,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test XOR_false_false");
     }
 
     @Test
@@ -627,6 +691,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test XOR_false_true");
     }
 
     @Test
@@ -638,6 +703,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test XOR_true_null");
     }
 
     @Test
@@ -649,6 +715,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test XOR_true_false");
     }
 
     @Test
@@ -660,6 +727,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test XOR_true_true");
     }
 
     // OR
@@ -672,6 +740,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test OR_null_null");
     }
 
     @Test
@@ -683,6 +752,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test OR_null_false");
     }
 
     @Test
@@ -694,6 +764,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test OR_null_true");
     }
 
     @Test
@@ -705,6 +776,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test OR_false_null");
     }
 
     @Test
@@ -716,6 +788,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test OR_false_false");
     }
 
     @Test
@@ -727,6 +800,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test OR_false_true");
     }
 
     @Test
@@ -738,6 +812,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test OR_true_null");
     }
 
     @Test
@@ -749,6 +824,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test OR_true_false");
     }
 
     @Test
@@ -760,6 +836,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test OR_true_true");
     }
 
     // NOR
@@ -772,6 +849,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test NOR_null_null");
     }
 
     @Test
@@ -783,6 +861,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test NOR_null_false");
     }
 
     @Test
@@ -794,6 +873,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test NOR_null_true");
     }
 
     @Test
@@ -805,6 +885,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test NOR_false_null");
     }
 
     @Test
@@ -816,6 +897,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test NOR_false_false");
     }
 
     @Test
@@ -827,6 +909,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test NOR_false_true");
     }
 
     @Test
@@ -838,6 +921,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test NOR_true_null");
     }
 
     @Test
@@ -849,6 +933,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test NOR_true_false");
     }
 
     @Test
@@ -860,6 +945,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test NOR_true_true");
     }
 
     //Equivalence
@@ -872,6 +958,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Equivalence_null_null");
     }
 
     @Test
@@ -883,6 +970,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Equivalence_null_false");
     }
 
     @Test
@@ -894,6 +982,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Equivalence_null_true");
     }
 
     @Test
@@ -905,6 +994,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Equivalence_false_null");
     }
 
     @Test
@@ -916,6 +1006,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Equivalence_false_false");
     }
 
     @Test
@@ -927,6 +1018,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Equivalence_false_true");
     }
 
     @Test
@@ -938,6 +1030,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Equivalence_true_null");
     }
 
     @Test
@@ -949,6 +1042,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Equivalence_true_false");
     }
 
     @Test
@@ -960,6 +1054,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Equivalence_true_true");
     }
 
     //NOT Y
@@ -972,6 +1067,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Not_Y_null_null");
     }
 
     @Test
@@ -983,6 +1079,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Not_Y_null_false");
     }
 
     @Test
@@ -994,6 +1091,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Not_Y_null_true");
     }
 
     @Test
@@ -1005,6 +1103,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Not_Y_false_null");
     }
 
     @Test
@@ -1016,6 +1115,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Not_Y_false_false");
     }
 
     @Test
@@ -1027,6 +1127,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Not_Y_false_true");
     }
 
     @Test
@@ -1038,6 +1139,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Not_Y_true_null");
     }
 
     @Test
@@ -1049,6 +1151,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Not_Y_true_false");
     }
 
     @Test
@@ -1060,6 +1163,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Not_Y_true_true");
     }
 
     // ANTI_IMPLICATION
@@ -1072,6 +1176,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test ANTI_IMPLICATION_null_null");
     }
 
     @Test
@@ -1083,6 +1188,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test ANTI_IMPLICATION_null_false");
     }
 
     @Test
@@ -1094,6 +1200,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test ANTI_IMPLICATION_null_true");
     }
 
     @Test
@@ -1105,6 +1212,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test ANTI_IMPLICATION_false_null");
     }
 
     @Test
@@ -1116,6 +1224,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test ANTI_IMPLICATION_false_false");
     }
 
     @Test
@@ -1127,6 +1236,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test ANTI_IMPLICATION_false_true");
     }
 
     @Test
@@ -1138,6 +1248,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test ANTI_IMPLICATION_true_null");
     }
 
     @Test
@@ -1149,6 +1260,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test ANTI_IMPLICATION_true_false");
     }
 
     @Test
@@ -1160,6 +1272,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test ANTI_IMPLICATION_true_true");
     }
 
     //Not_X
@@ -1172,6 +1285,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Not_X_null_null");
     }
 
     @Test
@@ -1183,6 +1297,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Not_X_null_false");
     }
 
     @Test
@@ -1194,6 +1309,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Not_X_null_true");
     }
 
     @Test
@@ -1205,6 +1321,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Not_X_false_null");
     }
 
     @Test
@@ -1216,6 +1333,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Not_X_false_false");
     }
 
     @Test
@@ -1227,6 +1345,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Not_X_false_true");
     }
 
     @Test
@@ -1238,6 +1357,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Not_X_true_null");
     }
 
     @Test
@@ -1249,6 +1369,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Not_X_true_false");
     }
 
     @Test
@@ -1260,6 +1381,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Not_X_true_true");
     }
 
     // Implication
@@ -1272,6 +1394,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Implication_null_null");
     }
 
     @Test
@@ -1283,6 +1406,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Not_X_null_false");
     }
 
     @Test
@@ -1294,6 +1418,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Not_X_null_true");
     }
 
     @Test
@@ -1305,6 +1430,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Not_X_false_null");
     }
 
     @Test
@@ -1316,6 +1442,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Not_X_false_false");
     }
 
     @Test
@@ -1327,6 +1454,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Not_X_false_true");
     }
 
     @Test
@@ -1338,6 +1466,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test Not_X_true_null");
     }
 
     @Test
@@ -1349,6 +1478,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test Not_X_true_false");
     }
 
     @Test
@@ -1360,6 +1490,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test Not_X_true_true");
     }
 
     // NOT AND
@@ -1372,6 +1503,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test NAND_null_null");
     }
 
     @Test
@@ -1383,6 +1515,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test NAND_null_false");
     }
 
     @Test
@@ -1394,6 +1527,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test NAND_null_true");
     }
 
     @Test
@@ -1405,6 +1539,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test NAND_false_null");
     }
 
     @Test
@@ -1416,6 +1551,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test NAND_false_false");
     }
 
     @Test
@@ -1427,6 +1563,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test NAND_false_true");
     }
 
     @Test
@@ -1438,6 +1575,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(null, result);
+        logger.info("In process test NAND_true_null");
     }
 
     @Test
@@ -1449,6 +1587,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test NAND_true_false");
     }
 
     @Test
@@ -1460,6 +1599,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(false, result);
+        logger.info("In process test NAND_true_true");
     }
 
     // BinaryConstantOne
@@ -1472,6 +1612,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test BinaryConstantOne_null_null");
     }
 
     @Test
@@ -1483,6 +1624,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test BinaryConstantOne_null_false");
     }
 
     @Test
@@ -1494,6 +1636,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test BinaryConstantOne_null_true");
     }
 
     @Test
@@ -1505,6 +1648,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test BinaryConstantOne_false_null");
     }
 
     @Test
@@ -1516,6 +1660,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test BinaryConstantOne_false_false");
     }
 
     @Test
@@ -1527,6 +1672,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test BinaryConstantOne_false_true");
     }
 
     @Test
@@ -1538,6 +1684,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test BinaryConstantOne_true_null");
     }
 
     @Test
@@ -1549,6 +1696,7 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test BinaryConstantOne_true_false");
     }
 
     @Test
@@ -1560,7 +1708,6 @@ public class BoolCalculatorTest {
 
         }
         Assert.assertEquals(true, result);
+        logger.info("In process test BinaryConstantOne_true_true");
     }
-
-
 }

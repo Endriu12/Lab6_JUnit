@@ -37,10 +37,10 @@
     -fx-font-family: "Segoe UI Semibold";
 }
 
-.text-area .content {
-    -fx-background-color: text-area-background;
-    -fx-background-image: url("../TextArea3.png");
-}
+/*.text-area .content {*/
+    /*-fx-background-color: text-area-background;*/
+    /*-fx-background-image: url("../TextArea3.png");*/
+/*}*/
 
 
 
